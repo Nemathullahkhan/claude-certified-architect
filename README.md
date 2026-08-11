@@ -6,7 +6,7 @@ This repo covers all 5 exam domains with detailed explanations, anti-patterns, d
 
 It is actively maintained and updated to track changes to Anthropic's models, APIs, and Claude Code. Last refresh: 2026-08 — see the dated notes under [Resources](#resources) for what changed.
 
-> **Note:** the domain deep-dive guides in `scenarios/domain-*.md` refer to this exam by its earlier short form **CCA-F**. That's the same exam as **CCAR-F** below — the short name predates Anthropic's current four-credential naming scheme.
+> **Note:** the domain deep-dive guides in `domains/domain-*.md` refer to this exam by its earlier short form **CCA-F**. That's the same exam as **CCAR-F** below — the short name predates Anthropic's current four-credential naming scheme.
 
 ## The Claude Certification Family
 
@@ -34,20 +34,20 @@ All four are 120-minute proctored exams delivered via Pearson VUE, passing score
 
 | Domain | Weight | Guide |
 |---|---|---|
-| Agentic Architecture & Orchestration | 27% | [Domain 1](scenarios/domain-1.md) |
-| Tool Design & MCP Integration | 18% | [Domain 2](scenarios/domain-2.md) |
-| Claude Code Configuration & Workflows | 20% | [Domain 3](scenarios/domain-3.md) |
-| Prompt Engineering & Structured Output | 20% | [Domain 4](scenarios/domain-4.md) |
-| Context Management & Reliability | 15% | [Domain 5](scenarios/domain-5.md) |
+| Agentic Architecture & Orchestration | 27% | [Domain 1](domains/domain-1.md) |
+| Tool Design & MCP Integration | 18% | [Domain 2](domains/domain-2.md) |
+| Claude Code Configuration & Workflows | 20% | [Domain 3](domains/domain-3.md) |
+| Prompt Engineering & Structured Output | 20% | [Domain 4](domains/domain-4.md) |
+| Context Management & Reliability | 15% | [Domain 5](domains/domain-5.md) |
 
 ## How to Use This Repo
 
 The exam doesn't test trivia — it tests whether you can look at a described production system and pick the *structurally correct* fix (hook vs. prompt, few-shot vs. architecture change, escalate vs. resolve). This repo is organized around that, in four layers:
 
-1. **Theory** ([scenarios/theory.md](scenarios/theory.md)) — the concepts once, in one place: Messages API basics, `tool_use`, the Agent SDK (agentic loops, `AgentDefinition`, hooks, subagents), MCP, Claude Code configuration, prompt engineering, the Batches API, escalation design, multi-agent error handling, context management, and provenance.
+1. **Theory** ([theory/theory.md](theory/theory.md)) — the concepts once, in one place: Messages API basics, `tool_use`, the Agent SDK (agentic loops, `AgentDefinition`, hooks, subagents), MCP, Claude Code configuration, prompt engineering, the Batches API, escalation design, multi-agent error handling, context management, and provenance.
 2. **Domain deep-dives** (table above) — one long-form guide per official exam domain, each with its exam weight, a "master mental model," anti-pattern lists, and 20+ practice MCQs with answer keys. This is where most of the study time should go.
 3. **Scenarios** ([scenarios/listedScenarios.md](scenarios/listedScenarios.md) + `scenario-1..6-*.md`) — the exam is scenario-anchored, so each of the 6 official scenarios gets its own walkthrough: system architecture, which domains/task-statements it exercises, scenario-specific traps, a practice question bank, and a cheat sheet.
-4. **Mock tests** ([scenarios/mock-test/](scenarios/mock-test/)) — timed practice sets grouped by scenario, plus a `wrong-answers/` tracker that records *why* each miss happened (not just the right answer) and a `report/` folder tracking score trends across attempts.
+4. **Mock tests** ([mock-tests/](mock-tests/)) — timed practice sets grouped by scenario, plus a `wrong-answers/` tracker that records *why* each miss happened (not just the right answer) and a `report/` folder tracking score trends across attempts.
 
 ### Repository structure
 
@@ -58,31 +58,33 @@ The exam doesn't test trivia — it tests whether you can look at a described pr
 ├── exam-guide.pdf               # Official Anthropic exam guide
 ├── Grep-vs-Glob.MD              # Quick reference: Grep vs Glob semantics
 ├── package.json / tsconfig.json   # Hands-on practice scaffold (work in progress, not yet populated)
-└── scenarios/
-    ├── theory.md                 # Theory foundations (13 chapters)
-    ├── domains.md                 # Raw Anthropic task-statement text for Domains 1–5
-    ├── domain-1.md .. domain-5.md   # Domain deep dives (one per row in the table above)
-    ├── listedScenarios.md         # Overview of the 6 official exam scenarios
-    ├── scenario-1-customer-support.md
-    ├── scenario-2-code-generation.md
-    ├── scenario-3-multi-agent-research.md
-    ├── scenario-4-developer-productivity.md
-    ├── scenario-5-cicd.md
-    ├── scenario-6-structured-extraction.md
-    └── mock-test/
-        ├── csa/ mar/ cicd/ code-generation/   # Mock tests grouped by scenario
-        ├── wrong-answers/      # Per-scenario miss logs with root-cause + rule to remember
-        └── report/             # Score-trend reports per scenario
+├── theory/
+│   └── theory.md               # Theory foundations (13 chapters)
+├── domains/
+│   ├── domains.md               # Raw Anthropic task-statement text for Domains 1–5
+│   └── domain-1.md .. domain-5.md   # Domain deep dives (one per row in the table above)
+├── scenarios/
+│   ├── listedScenarios.md       # Overview of the 6 official exam scenarios
+│   ├── scenario-1-customer-support.md
+│   ├── scenario-2-code-generation.md
+│   ├── scenario-3-multi-agent-research.md
+│   ├── scenario-4-developer-productivity.md
+│   ├── scenario-5-cicd.md
+│   └── scenario-6-structured-extraction.md
+└── mock-tests/
+    ├── customer-support-agent/ multi-agent-research/ cicd/ code-generation/   # Mock tests grouped by scenario
+    ├── wrong-answers/      # Per-scenario miss logs with root-cause + rule to remember
+    └── report/             # Score-trend reports per scenario
 ```
 
 ### Recommended study path
 
-1. Read `scenarios/theory.md` once, start to finish, for the shared vocabulary.
-2. Work through `scenarios/domain-1.md` → `domain-5.md` in order (they're ordered by exam weight) — read the mental model and anti-pattern lists, then answer each domain's practice MCQs before checking the answer key.
+1. Read `theory/theory.md` once, start to finish, for the shared vocabulary.
+2. Work through `domains/domain-1.md` → `domain-5.md` in order (they're ordered by exam weight) — read the mental model and anti-pattern lists, then answer each domain's practice MCQs before checking the answer key.
 3. Read `scenarios/listedScenarios.md`, then each `scenario-N-*.md` — these show how the domains combine inside one realistic system.
-4. Take a mock test from `scenarios/mock-test/{csa,mar,cicd,code-generation}/`. Score it cold, no notes.
-5. For every miss, log it in the matching `scenarios/mock-test/wrong-answers/*.md` file with the *reason* you missed it, not just the correct letter.
-6. Check `scenarios/mock-test/report/` for the score trend per scenario; retake targeted drills on whatever category is still weak until misses stop recurring.
+4. Take a mock test from `mock-tests/{customer-support-agent,multi-agent-research,cicd,code-generation}/`. Score it cold, no notes.
+5. For every miss, log it in the matching `mock-tests/wrong-answers/*.md` file with the *reason* you missed it, not just the correct letter.
+6. Check `mock-tests/report/` for the score trend per scenario; retake targeted drills on whatever category is still weak until misses stop recurring.
 
 ### Hands-on practice scaffold (work in progress)
 
@@ -109,7 +111,7 @@ The exam doesn't test trivia — it tests whether you can look at a described pr
 
 **Repository owner:** Muhammed Nemathullah Khan — maintains this repo's domain deep-dives, scenario walkthroughs, and mock-test/wrong-answer tracking.
 
-**Author of the domain deep-dive guides (`scenarios/domain-1.md` … `domain-5.md`):** [Arun Varadharajalu](https://www.linkedin.com/in/arunv11u/)
+**Author of the domain deep-dive guides (`domains/domain-1.md` … `domain-5.md`):** [Arun Varadharajalu](https://www.linkedin.com/in/arunv11u/)
 
 **Additional sources referenced in the domain guides:**
 - [guide_en.md — core topics & fundamentals overview](https://github.com/paullarionov/claude-certified-architect/blob/main/guide_en.md) *(that guide itself credits its exam-domain breakdown to a compilation by **@hooeem** on X)*

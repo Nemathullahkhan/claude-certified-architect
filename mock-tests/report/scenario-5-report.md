@@ -1,6 +1,6 @@
 # Scenario 5 Performance Report — Claude Code for CI/CD
 
-> Consolidated performance summary across all practice attempts for Scenario 5. Source detail for every missed question lives in `scenarios/mock-test/wrong-answers/wrong-answers-cicd.md` — this report summarizes trends and readiness, not individual question explanations.
+> Consolidated performance summary across all practice attempts for Scenario 5. Source detail for every missed question lives in `mock-tests/wrong-answers/wrong-answers-cicd.md` — this report summarizes trends and readiness, not individual question explanations.
 
 ---
 
@@ -71,7 +71,7 @@ Mock Test 1 **12/15 (80%)** is better than the historical first-adversarial floo
 
 Full explanations for every missed question, including the specific trap and the rule extracted from it, are maintained in:
 
-- `scenarios/mock-test/wrong-answers/wrong-answers-cicd.md`
-- Mock file: `scenarios/mock-test/cicd/mock-test-cicd-1.md`
+- `mock-tests/wrong-answers/wrong-answers-cicd.md`
+- Mock file: `mock-tests/cicd/mock-test-cicd-1.md`
 
 This report will be updated after each new Scenario 5 mock test attempt.

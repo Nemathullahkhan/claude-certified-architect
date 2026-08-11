@@ -1,4 +1,4 @@
-# Wrong Answer Tracker — Multi-Agent Research (MAR)
+# Wrong Answer Tracker — Multi-Agent Research
 
 > Log every missed question here with the **why**, not just the correct answer. The goal is to catch *patterns* in your mistakes, not just memorize individual answers.
 
@@ -17,7 +17,7 @@ No misses. Full marks on the first attempt at the scenario's own practice questi
 
 ---
 
-## Mock Test 1 (`mock-test-mar-1.md`) — 11/15 (73.3%)
+## Mock Test 1 (`mock-test-multi-agent-research-1.md`) — 11/15 (73.3%)
 
 ### Q3 — Document analysis subagent fails on corrupted/password-protected/hanging PDFs; every exception terminates the subagent and forces the coordinator into routine error triage
 
@@ -59,7 +59,7 @@ No misses. Full marks on the first attempt at the scenario's own practice questi
 
 ---
 
-## Mock Test 2 (`mock-test-mar-2.md`) — 14/15 (93.3%)
+## Mock Test 2 (`mock-test-multi-agent-research-2.md`) — 14/15 (93.3%)
 
 ### Q7 — Pipeline crashed mid-run (12 of 28 documents processed); need to resume without repeating work or losing fidelity, while staying context-efficient
 

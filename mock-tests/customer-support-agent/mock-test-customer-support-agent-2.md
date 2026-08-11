@@ -1,6 +1,6 @@
 # Mock Test: Customer Support Agent (CSA) — Set 2
 
-> Built specifically around the gap patterns identified in `wrong-answers/wrong-answer-csa.md`: safety-vs-prompting confusion, reasoning-quality vs. architectural overreach, fixed-pattern vs. open-ended quality issues, efficiency fixes that overreach into speculative execution, and stems that lock in a technique. Distractors are intentionally tempting — read every stem twice before answering.
+> Built specifically around the gap patterns identified in `wrong-answers/wrong-answer-customer-support-agent.md`: safety-vs-prompting confusion, reasoning-quality vs. architectural overreach, fixed-pattern vs. open-ended quality issues, efficiency fixes that overreach into speculative execution, and stems that lock in a technique. Distractors are intentionally tempting — read every stem twice before answering.
 
 ---
 

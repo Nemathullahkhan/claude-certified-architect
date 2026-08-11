@@ -13,7 +13,7 @@
 **Domain Resources:**
 - **Core topics & fundamentals overview:** [CCA-F Study Guide — guide_en.md](https://github.com/paullarionov/claude-certified-architect/blob/main/guide_en.md)
 - **Deep dive in each domain:** [Domain 1](./domain-1.md) · [Domain 2](./domain-2.md) · [Domain 3](./domain-3.md) · [Domain 4](./domain-4.md) · [Domain 5](./domain-5.md)
-- **Scenarios:** [All 6 exam scenarios](./listedScenarios.md)
+- **Scenarios:** [All 6 exam scenarios](../scenarios/listedScenarios.md)
 - **Mock test and sources:** [Mock test bank](./mock-test/) · [Claude Certification Guide — Mock Exam](https://claudecertificationguide.com/mock-exam) · [CyberSkill Practice — CCAF](https://practice.cyberskill.world/practice/ccaf/exam) · [CertSafari — CCAF](https://www.certsafari.com/anthropic/claude-certified-architect-foundations)
 
 ---

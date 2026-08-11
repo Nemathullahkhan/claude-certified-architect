@@ -1,6 +1,6 @@
 # Targeted Drill: Customer Support Agent (CSA) — Architecture-Overreach & Escalation-Scope
 
-> Purpose: this is NOT a full-domain mock. It isolates your two remaining live risk patterns from `wrong-answer-csa.md`:
+> Purpose: this is NOT a full-domain mock. It isolates your two remaining live risk patterns from `wrong-answer-customer-support-agent.md`:
 > 1. **Architecture-overreach** — reaching for a new model call, new agent instance, speculative/automatic tool execution, or new infrastructure when a simpler few-shot/prompting fix is correct (confirmed recurring in Mock 1 & Mock 2).
 > 2. **Escalation-scope calibration** — letting one sub-issue's escalation need pull the *entire* multi-issue request into escalation, instead of decomposing first and escalating only what needs it (Mock 3, Q5).
 >
@@ -168,4 +168,4 @@ The "what would I lose access to" question is a simple, factual policy/feature l
 
 ---
 
-**Scoring guide for this drill:** 9-10/10 = pattern confirmed closed, safe to move to Scenario 2. 7-8/10 = one more isolated drill before moving on. Below 7 = the pattern is still active; revisit `wrong-answer-csa.md` and the "Recommended Next Steps" in `scenario-1-report.md` before attempting Scenario 2.
+**Scoring guide for this drill:** 9-10/10 = pattern confirmed closed, safe to move to Scenario 2. 7-8/10 = one more isolated drill before moving on. Below 7 = the pattern is still active; revisit `wrong-answer-customer-support-agent.md` and the "Recommended Next Steps" in `scenario-1-report.md` before attempting Scenario 2.

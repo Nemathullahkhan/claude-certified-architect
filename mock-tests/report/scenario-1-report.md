@@ -1,6 +1,6 @@
 # Scenario 1 Performance Report — Customer Support Resolution Agent
 
-> Consolidated performance summary across all practice attempts for Scenario 1. Source detail for every missed question lives in `scenarios/mock-test/wrong-answers/wrong-answer-csa.md` — this report summarizes trends and readiness, not individual question explanations.
+> Consolidated performance summary across all practice attempts for Scenario 1. Source detail for every missed question lives in `mock-tests/wrong-answers/wrong-answer-customer-support-agent.md` — this report summarizes trends and readiness, not individual question explanations.
 
 ---
 
@@ -28,7 +28,7 @@ The steady climb from 73% to 89% across three increasingly adversarial mock test
 
 ## 3. Mistake Categories Identified
 
-Every miss across the three mock tests falls into one of these categories (see `wrong-answer-csa.md` for full per-question detail):
+Every miss across the three mock tests falls into one of these categories (see `wrong-answer-customer-support-agent.md` for full per-question detail):
 
 | Category | Mock Tests Affected | Status |
 |---|---|---|
@@ -65,7 +65,7 @@ That aggregate score alone wasn't sufficient proof, since Mock 3 happened not to
 3. **Complete escalation trigger list** — explicit request OR policy gap OR inability to make progress after reasonable retries. Surfaced in Mock 3, not retested since (pure knowledge-recall item, low risk of resurfacing as a reasoning error).
 
 **New, isolated watch-item (not yet a confirmed pattern):**
-- **Over-rigidification** — forcing a fixed/identical process on every case regardless of content, when adaptive judgment is actually needed (the mirror-image failure to architecture-overreach: removing judgment by over-simplifying instead of over-architecting). One occurrence (targeted drill Q5). Not drilled further, since one instance doesn't yet meet the bar for a confirmed recurring pattern — noted in `wrong-answer-csa.md` in case it resurfaces in Scenario 2 or later.
+- **Over-rigidification** — forcing a fixed/identical process on every case regardless of content, when adaptive judgment is actually needed (the mirror-image failure to architecture-overreach: removing judgment by over-simplifying instead of over-architecting). One occurrence (targeted drill Q5). Not drilled further, since one instance doesn't yet meet the bar for a confirmed recurring pattern — noted in `wrong-answer-customer-support-agent.md` in case it resurfaces in Scenario 2 or later.
 
 ---
 
@@ -73,7 +73,7 @@ That aggregate score alone wasn't sufficient proof, since Mock 3 happened not to
 
 1. ~~Take a Mock Test 4 weighted toward architecture-overreach and escalation-scope~~ — **done via targeted drill, both patterns confirmed closed (9/10, 0 misses in either category).**
 2. **Shift practice time to other scenarios** (e.g., `scenario-2-code-generation.md`, `scenario-5-cicd.md`) using the same mock-test + wrong-answer-tracker + targeted-drill workflow established here. Don't keep re-testing Scenario 1 for marginal gains — the evidence bar for exam-readiness has been met.
-3. Keep using `wrong-answers/wrong-answer-csa.md` as the running log for any future Scenario 1 misses, even after reaching exam-ready status — a single new miss post-readiness is still worth categorizing in case it signals a new pattern. In particular, watch for recurrence of the **over-rigidification** pattern (forcing a fixed process where adaptive judgment is needed) across other scenarios, since it may generalize beyond Scenario 1.
+3. Keep using `wrong-answers/wrong-answer-customer-support-agent.md` as the running log for any future Scenario 1 misses, even after reaching exam-ready status — a single new miss post-readiness is still worth categorizing in case it signals a new pattern. In particular, watch for recurrence of the **over-rigidification** pattern (forcing a fixed process where adaptive judgment is needed) across other scenarios, since it may generalize beyond Scenario 1.
 
 ---
 
@@ -81,6 +81,6 @@ That aggregate score alone wasn't sufficient proof, since Mock 3 happened not to
 
 Full explanations for every missed question, including the specific trap and the rule extracted from it, are maintained in:
 
-- `scenarios/mock-test/wrong-answers/wrong-answer-csa.md`
+- `mock-tests/wrong-answers/wrong-answer-customer-support-agent.md`
 
 This report will be updated after each new Scenario 1 mock test attempt.

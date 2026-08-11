@@ -1,8 +1,8 @@
-# Wrong Answer Tracker — Customer Support Agent (CSA)
+# Wrong Answer Tracker — Customer Support Agent
 
 > Log every missed question here with the **why**, not just the correct answer. The goal is to catch *patterns* in your mistakes, not just memorize individual answers.
 
-**Problem-category legend** (see `scenarios/mock-test/decision-framework.md` if created):
+**Problem-category legend** (see `mock-tests/decision-framework.md` if created):
 
 - 🔒 **Safety/Financial/Compliance** → deterministic gate/hook, never system prompt
 - 🧠 **Reasoning/Sequencing Quality** → few-shot examples
@@ -12,7 +12,7 @@
 
 ---
 
-## Mock Test 1 (`mock-test-csa-1.md`) — 5/20 missed
+## Mock Test 1 (`mock-test-customer-support-agent-1.md`) — 5/20 missed
 
 ### Q47 — Multi-issue tool selection accuracy drop (94% → 58%)
 
@@ -64,7 +64,7 @@
 
 ---
 
-## Mock Test 2 (`mock-test-csa-2.md`) — 12/15 (80%)
+## Mock Test 2 (`mock-test-customer-support-agent-2.md`) — 12/15 (80%)
 
 ### Q62 — Explicit human request bundled with a quick order-status check
 
@@ -92,7 +92,7 @@
 
 ---
 
-## Mock Test 3 (`mock-test-csa-3.md`) — 17/19 (89%)
+## Mock Test 3 (`mock-test-customer-support-agent-3.md`) — 17/19 (89%)
 
 ### Q5 — Multi-issue message: resolvable billing question + policy-gap price match
 
@@ -112,7 +112,7 @@
 
 ---
 
-## Targeted Drill (`mock-test-csa-4-targeted-drill.md`) — 9/10 (90%)
+## Targeted Drill (`mock-test-customer-support-agent-4-targeted-drill.md`) — 9/10 (90%)
 
 > Isolated drill testing only architecture-overreach and escalation-scope, per `scenario-1-report.md` §5 recommendation.
 

@@ -1,6 +1,6 @@
 # Scenario 3 Performance Report — Multi-Agent Research System
 
-> Consolidated performance summary across all practice attempts for Scenario 3. Source detail for every missed question lives in `scenarios/mock-test/wrong-answers/wrong-answers-mar.md` — this report summarizes trends and readiness, not individual question explanations.
+> Consolidated performance summary across all practice attempts for Scenario 3. Source detail for every missed question lives in `mock-tests/wrong-answers/wrong-answers-multi-agent-research.md` — this report summarizes trends and readiness, not individual question explanations.
 
 ---
 
@@ -9,8 +9,8 @@
 | Attempt | Score | Percentage | Notes |
 |---|---|---|---|
 | Practice Mock | 22/22 | **100%** | Scenario-3 practice question bank (`scenario-3-multi-agent-research.md §7`) — all task statements 1.2, 1.3, 1.6, 1.7, 2.1, 2.3, 2.4, 5.1, 5.3, 5.6 |
-| Mock Test 1 | 11/15 | **73.3%** | First adversarial mock (`mock-test-mar-1.md`) — error propagation, tool interface/least-privilege design, task decomposition, empty-result vs. failure semantics |
-| Mock Test 2 | 14/15 | **93.3%** | Second adversarial mock (`mock-test-mar-2.md`) — context isolation, dynamic routing, parallel spawning, tool splitting, claim-source provenance, confidence/uncertainty handling, crash recovery |
+| Mock Test 1 | 11/15 | **73.3%** | First adversarial mock (`mock-test-multi-agent-research-1.md`) — error propagation, tool interface/least-privilege design, task decomposition, empty-result vs. failure semantics |
+| Mock Test 2 | 14/15 | **93.3%** | Second adversarial mock (`mock-test-multi-agent-research-2.md`) — context isolation, dynamic routing, parallel spawning, tool splitting, claim-source provenance, confidence/uncertainty handling, crash recovery |
 
 **Overall trend: 100% → 73.3% → 93.3%.** The expected practice-bank-to-mock-test drop occurred right on schedule (matching the pattern seen in Scenarios 1 and 2), followed by a strong recovery. All three of Mock 1's confirmed mistake patterns had zero recurrences in Mock 2, and the single Mock 2 miss is a new, isolated pattern rather than a repeat.
 
@@ -26,7 +26,7 @@ The bounce back to 93.3% in Mock Test 2 is a good signal: it shows the three pat
 
 ## 3. Mistake Categories Identified
 
-Every miss across the two mock tests falls into one of these categories (see `wrong-answers-mar.md` for full per-question detail):
+Every miss across the two mock tests falls into one of these categories (see `wrong-answers-multi-agent-research.md` for full per-question detail):
 
 | Category | Mock Tests Affected | Status |
 |---|---|---|
@@ -69,7 +69,7 @@ Mock Test 2's 93.3% (14/15), combined with zero recurrence of any of Mock 1's fo
 4. Empty-result vs. access-failure conflation — appeared in Mock 1, 0 misses in Mock 2.
 
 **New, isolated watch-item (not yet a confirmed pattern):**
-- **Dual-constraint screening** — in crash-recovery/state-management questions that name two explicit requirements (e.g., "fidelity AND efficiency"), failing to eliminate options that clearly sacrifice one of the two. One occurrence (Mock 2, Q7). Not yet drilled further, since one instance doesn't meet the bar for a confirmed recurring pattern — flagged in `wrong-answers-mar.md` in case it resurfaces.
+- **Dual-constraint screening** — in crash-recovery/state-management questions that name two explicit requirements (e.g., "fidelity AND efficiency"), failing to eliminate options that clearly sacrifice one of the two. One occurrence (Mock 2, Q7). Not yet drilled further, since one instance doesn't meet the bar for a confirmed recurring pattern — flagged in `wrong-answers-multi-agent-research.md` in case it resurfaces.
 
 ---
 
@@ -77,7 +77,7 @@ Mock Test 2's 93.3% (14/15), combined with zero recurrence of any of Mock 1's fo
 
 1. Run a short targeted drill (5-8 questions) isolating the one new Mock 2 pattern — dual-constraint screening — using fresh scenarios (state management, context-passing trade-offs, latency-vs-completeness). A clean result (4-5/5 or 7-8/8) would be sufficient to call Scenario 3 exam-ready without needing a full Mock Test 3.
 2. If the targeted drill comes back clean, shift focus to other scenarios (e.g., Scenario 4, 5, or 6) using the same workflow established here.
-3. Keep using `wrong-answers-mar.md` as the running log for any future Scenario 3 misses, even after reaching exam-ready status.
+3. Keep using `wrong-answers-multi-agent-research.md` as the running log for any future Scenario 3 misses, even after reaching exam-ready status.
 
 ---
 
@@ -85,6 +85,6 @@ Mock Test 2's 93.3% (14/15), combined with zero recurrence of any of Mock 1's fo
 
 Full explanations for every missed question, including the specific trap and the rule extracted from it, are maintained in:
 
-- `scenarios/mock-test/wrong-answers/wrong-answers-mar.md`
+- `mock-tests/wrong-answers/wrong-answers-multi-agent-research.md`
 
 This report will be updated after each new Scenario 3 mock test attempt.
