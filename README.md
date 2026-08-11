@@ -40,14 +40,47 @@ All four are 120-minute proctored exams delivered via Pearson VUE, passing score
 | Prompt Engineering & Structured Output | 20% | [Domain 4](domains/domain-4.md) |
 | Context Management & Reliability | 15% | [Domain 5](domains/domain-5.md) |
 
+## Scenarios
+
+The exam is scenario-anchored: every question is framed inside one of 6 official production scenarios, and **4 of the 6 are randomly selected** for any given exam sitting. See [scenarios/listedScenarios.md](scenarios/listedScenarios.md) for Anthropic's original scenario text.
+
+| # | Scenario | Primary Domains | Walkthrough | Mock tests available |
+|---|---|---|---|---|
+| 1 | Customer Support Resolution Agent | Agentic Architecture & Orchestration · Tool Design & MCP Integration · Context Management & Reliability | [scenario-1-customer-support.md](scenarios/scenario-1-customer-support.md) | 4 sets — [mock-tests/customer-support-agent/](mock-tests/customer-support-agent/) |
+| 2 | Code Generation with Claude Code | Claude Code Configuration & Workflows · Context Management & Reliability | [scenario-2-code-generation.md](scenarios/scenario-2-code-generation.md) | 3 sets — [mock-tests/code-generation/](mock-tests/code-generation/) |
+| 3 | Multi-Agent Research System | Agentic Architecture & Orchestration · Tool Design & MCP Integration · Context Management & Reliability | [scenario-3-multi-agent-research.md](scenarios/scenario-3-multi-agent-research.md) | 2 sets — [mock-tests/multi-agent-research/](mock-tests/multi-agent-research/) |
+| 4 | Developer Productivity with Claude | Tool Design & MCP Integration · Claude Code Configuration & Workflows · Agentic Architecture & Orchestration | [scenario-4-developer-productivity.md](scenarios/scenario-4-developer-productivity.md) | None yet |
+| 5 | Claude Code for Continuous Integration | Claude Code Configuration & Workflows · Prompt Engineering & Structured Output | [scenario-5-cicd.md](scenarios/scenario-5-cicd.md) | 1 set — [mock-tests/cicd/](mock-tests/cicd/) |
+| 6 | Structured Data Extraction | Prompt Engineering & Structured Output · Context Management & Reliability | [scenario-6-structured-extraction.md](scenarios/scenario-6-structured-extraction.md) | None yet |
+
+
 ## How to Use This Repo
 
 The exam doesn't test trivia — it tests whether you can look at a described production system and pick the *structurally correct* fix (hook vs. prompt, few-shot vs. architecture change, escalate vs. resolve). This repo is organized around that, in four layers:
 
 1. **Theory** ([theory/theory.md](theory/theory.md)) — the concepts once, in one place: Messages API basics, `tool_use`, the Agent SDK (agentic loops, `AgentDefinition`, hooks, subagents), MCP, Claude Code configuration, prompt engineering, the Batches API, escalation design, multi-agent error handling, context management, and provenance.
 2. **Domain deep-dives** (table above) — one long-form guide per official exam domain, each with its exam weight, a "master mental model," anti-pattern lists, and 20+ practice MCQs with answer keys. This is where most of the study time should go.
-3. **Scenarios** ([scenarios/listedScenarios.md](scenarios/listedScenarios.md) + `scenario-1..6-*.md`) — the exam is scenario-anchored, so each of the 6 official scenarios gets its own walkthrough: system architecture, which domains/task-statements it exercises, scenario-specific traps, a practice question bank, and a cheat sheet.
+3. **Scenarios** ([scenarios/listedScenarios.md](scenarios/listedScenarios.md) + `scenario-1..6-*.md`) — each of the 6 official scenarios gets its own walkthrough: system architecture, which domains/task-statements it exercises, scenario-specific traps, a practice question bank, and a cheat sheet. See the [Scenarios](#scenarios) section below for the full list and how prep is run scenario-by-scenario.
 4. **Mock tests** ([mock-tests/](mock-tests/)) — timed practice sets grouped by scenario, plus a `wrong-answers/` tracker that records *why* each miss happened (not just the right answer) and a `report/` folder tracking score trends across attempts.
+
+
+### How prep is organized around scenarios
+
+Domains give the vocabulary; scenarios are where the exam actually tests it, so practice is run **one scenario at a time** through a repeatable loop. The mock tests are shared, reusable question banks — your *results* on them are personal, so score tracking is kept in two per-user templates rather than committed data for one specific person:
+
+- [`mock-tests/wrong-answers/TEMPLATE-wrong-answer-tracker.md`](mock-tests/wrong-answers/TEMPLATE-wrong-answer-tracker.md) — copy to `wrong-answer-<scenario-slug>.md` to log misses with the *why*, not just the correct letter.
+- [`mock-tests/report/TEMPLATE-scenario-report.md`](mock-tests/report/TEMPLATE-scenario-report.md) — copy to `scenario-N-report.md` to aggregate score trend and mistake categories across your attempts.
+
+The loop:
+
+1. **Walkthrough first** — read the scenario's `scenario-N-*.md`, then answer its own practice question bank (§7 in each file) untimed, with notes. This confirms the underlying concepts before adding exam pressure.
+2. **Cold mock test** — take a timed mock from `mock-tests/<scenario-folder>/` with no notes. Mocks deliberately stack tempting, similarly-worded distractors the practice bank doesn't use, so the score usually drops from the practice-bank's ~100% — that drop is expected, not a red flag.
+3. **Log every miss with a reason, not just the right answer** — in your copy of the wrong-answer tracker, record what you picked, the correct answer, *why* you missed it, and the generalizable rule. The goal is catching a recurring failure pattern (e.g. "reaching for an architectural fix when few-shot examples suffice"), not memorizing individual questions.
+4. **Retake and check the trend** — your scenario report aggregates score trend and mistake categories across attempts. A category that recurs across 2+ mocks becomes a named pattern worth a dedicated fix; a one-off miss doesn't.
+5. **Targeted drill on what's still live** — once a category is confirmed recurring, run a short drill (5–10 fresh questions) isolating just that pattern instead of a full mock, to confirm it's closed without diluting the signal with questions you already answer reliably. `mock-tests/customer-support-agent/mock-test-customer-support-agent-4-targeted-drill.md` is a worked example of this format.
+6. **Exam-ready bar, then move on** — treat a scenario as exam-ready at roughly ≥90% on a full adversarial mock *with zero categories that have recurred twice*. Once met, stop drilling that scenario for marginal gains and shift the same loop to the next weakest one.
+
+Since only 4 of 6 scenarios appear per exam, don't stop after covering just one or two — run this loop cold on each scenario at least once before the exam date, prioritizing whichever currently has the least mock-test coverage.
 
 ### Repository structure
 
@@ -81,10 +114,7 @@ The exam doesn't test trivia — it tests whether you can look at a described pr
 
 1. Read `theory/theory.md` once, start to finish, for the shared vocabulary.
 2. Work through `domains/domain-1.md` → `domain-5.md` in order (they're ordered by exam weight) — read the mental model and anti-pattern lists, then answer each domain's practice MCQs before checking the answer key.
-3. Read `scenarios/listedScenarios.md`, then each `scenario-N-*.md` — these show how the domains combine inside one realistic system.
-4. Take a mock test from `mock-tests/{customer-support-agent,multi-agent-research,cicd,code-generation}/`. Score it cold, no notes.
-5. For every miss, log it in the matching `mock-tests/wrong-answers/*.md` file with the *reason* you missed it, not just the correct letter.
-6. Check `mock-tests/report/` for the score trend per scenario; retake targeted drills on whatever category is still weak until misses stop recurring.
+3. Switch to scenario-by-scenario prep: follow the 6-step loop under [Scenarios](#scenarios) above (walkthrough → cold mock → wrong-answer log → trend report → targeted drill → exam-ready bar) for each scenario, prioritizing the ones with mock-test coverage already started.
 
 ### Hands-on practice scaffold (work in progress)
 

@@ -4,7 +4,7 @@ Orientation for Claude Code sessions working in this repo.
 
 ## What this repo is
 
-A personal study repo for the **Claude Certified Architect – Foundations (CCA-F)** exam. It is almost entirely markdown study material — there is no application code to build or run yet. See `README.md` for the human-facing study-path explanation.
+A shared study repo for the **Claude Certified Architect – Foundations (CCA-F)** exam. It is almost entirely markdown study material — there is no application code to build or run yet. See `README.md` for the human-facing study-path explanation.
 
 ## Directory map
 
@@ -23,9 +23,9 @@ A personal study repo for the **Claude Certified Architect – Foundations (CCA-
 │   ├── listedScenarios.md      # The 6 official exam scenarios (4 of 6 appear on any given exam)
 │   └── scenario-1..6-*.md       # One expanded walkthrough per scenario, with practice questions + cheat sheet
 └── mock-tests/
-    ├── customer-support-agent/ multi-agent-research/ cicd/ code-generation/   # Practice exams grouped by scenario
-    ├── wrong-answers/            # Miss log: wrong answer + why + rule to remember (not just correct answers)
-    └── report/                   # Score-trend summaries per scenario across attempts
+    ├── customer-support-agent/ multi-agent-research/ cicd/ code-generation/   # Practice exams grouped by scenario (shared question banks)
+    ├── wrong-answers/            # TEMPLATE-wrong-answer-tracker.md — copy per scenario; personal miss logs, not committed for any one user
+    └── report/                   # TEMPLATE-scenario-report.md — copy per scenario; personal score-trend summaries, not committed for any one user
 ```
 
 ## Caveat: the scaffold is not implemented

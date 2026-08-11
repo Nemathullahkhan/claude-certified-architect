@@ -2,7 +2,7 @@
 
 > First adversarial mock for Scenario 5. Covers CI headless invocation, structured CLI output, Batch vs Synchronous API selection (including multi-turn tool-calling limits), explicit review criteria, few-shot actionable feedback, self-review bias, multi-pass review, prior-findings / existing-test context injection, and trust restoration via category disable. Distractors are intentionally tempting — read every stem twice before answering.
 >
-> Source numbering (Q16–Q30) matches the practice-exam question IDs used in `wrong-answers-cicd.md`.
+> Source numbering (Q16–Q30) matches the original practice-exam question IDs — use them as-is when logging misses in your own wrong-answer tracker (see `mock-tests/wrong-answers/TEMPLATE-wrong-answer-tracker.md`).
 
 ---
 
